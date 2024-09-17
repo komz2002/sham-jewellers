@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sankofa+Display&display=swap');
+
+
+.head {
+  background-color: #5F362B;
+  height: 2rem;
+}
+
+.sham {
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .sham {
+    height: 3rem;
+  }
+}
+
+.space {
+  gap: 2rem;
+  color: #8D8D8D;
+  font: 13px Montserrat, Sans-serif; 
+  font-size: 1rem;
+  font-style: inherit;
+  text-decoration: none;
+}
+
+.space li {
+  text-decoration: none;
+}
+
+.nav-link {
+   color: #000;  
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none; 
+} 
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 3rem;
+  width: 0;
+  height: 2px;
+  background-color: #9a9b9c;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #5F362B;
+}
+
+.nav-item .dropdown-menu {
+  color: #5F362B;
+}
+
+
+.nav-dropdown-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-dropdown-link:hover {
+  color: inherit;
+}

@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Layout from "./components/Layout";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Product from "./components/Products/Product";
+import Riwaaz from "./components/Riwaaz/Riwaaz";
+import Dazling from "./components/Dazling/Dazling"
+import Vivhaa from "./components/Vivaa/Vivhaa"
 
-function App() {
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="About" element={<About />} />
+          <Route path="Contact" element={<Contact />} />
+          <Route path="Products" element={<Product />} />
+          <Route path="Riwaaz" element={<Riwaaz />} />
+          <Route path="Dazling" element={<Dazling />} />
+          <Route path="Vivhaa" element={<Vivhaa/>} />
+          
+        </Route>
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
